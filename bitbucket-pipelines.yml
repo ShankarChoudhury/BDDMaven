@@ -1,0 +1,13 @@
+image: selenium/hub
+pipelines:
+  default:
+   - step:
+        services:
+          - docker
+        script:
+          # Run Test
+          - mvn test
+          - docker ps
+
+        artifacts: # defining the artifacts .
+          - target/*

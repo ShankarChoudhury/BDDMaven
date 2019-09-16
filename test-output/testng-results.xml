@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="LoginSuite" duration-ms="141649" started-at="2018-10-22T03:56:29Z" finished-at="2018-10-22T03:58:51Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="141649" started-at="2018-10-22T03:56:29Z" finished-at="2018-10-22T03:58:51Z">
+      <class name="cloudPackage.LoginKimai">
+        <test-method status="PASS" signature="I_am_on_home_page_of_Kimai_Application()[pri:1, instance:cloudPackage.LoginKimai@187293dd]" name="I_am_on_home_page_of_Kimai_Application" duration-ms="123920" started-at="2018-10-21T22:56:30Z" finished-at="2018-10-21T22:58:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- I_am_on_home_page_of_Kimai_Application -->
+        <test-method status="PASS" signature="I_login_with_valid_credentials()[pri:2, instance:cloudPackage.LoginKimai@187293dd]" name="I_login_with_valid_credentials" duration-ms="5636" started-at="2018-10-21T22:58:34Z" finished-at="2018-10-21T22:58:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- I_login_with_valid_credentials -->
+        <test-method status="PASS" signature="I_should_see_home_page()[pri:3, instance:cloudPackage.LoginKimai@187293dd]" name="I_should_see_home_page" duration-ms="10931" started-at="2018-10-21T22:58:39Z" finished-at="2018-10-21T22:58:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- I_should_see_home_page -->
+        <test-method status="PASS" signature="I_logout_of_the_application()[pri:4, instance:cloudPackage.LoginKimai@187293dd]" name="I_logout_of_the_application" duration-ms="910" started-at="2018-10-21T22:58:50Z" finished-at="2018-10-21T22:58:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- I_logout_of_the_application -->
+      </class> <!-- cloudPackage.LoginKimai -->
+    </test> <!-- Test -->
+  </suite> <!-- LoginSuite -->
+</testng-results>

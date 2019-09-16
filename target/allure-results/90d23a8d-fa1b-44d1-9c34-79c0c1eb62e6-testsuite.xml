@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1568673165085" stop="1568673229294" version="1.5.0" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Test login feature in InsCo application</name>
+    <description type="text"></description>
+    <test-cases>
+        <test-case start="1568673165086" stop="1568673229294" status="broken">
+            <name>Check Valid Login</name>
+            <title>Check Valid Login</title>
+            <description type="text"></description>
+            <failure>
+                <message>WebDriverException: connection refused
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'PHOENIX', ip: '192.168.54.2', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_191'
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: </message>
+                <stack-trace>org.openqa.selenium.WebDriverException: connection refused
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'PHOENIX', ip: '192.168.54.2', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_191'
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: 
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:122)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:125)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:103)
+	at cloudPackage.Insco.i_am_on_home_page_of_InsCo_Application(Insco.java:28)
+	at ✽.Given I am on home page of InsCo Application(InsuranceCo_Login.feature:6)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1568673165087" stop="1568673229277" status="broken">
+                    <name>Given I am on home page of InsCo Application</name>
+                    <title>Given I am on home page of InsCo Application</title>
+                </step>
+                <step start="1568673229278" stop="1568673229279" status="canceled">
+                    <name>When I login with credentials</name>
+                    <title>When I login with credentials</title>
+                </step>
+                <step start="1568673229279" stop="1568673229280" status="canceled">
+                    <name>Then I should successfully view the Home Page</name>
+                    <title>Then I should successfully view the Home Page</title>
+                </step>
+                <step start="1568673229293" stop="1568673229293" status="canceled">
+                    <name>And I signout of the application</name>
+                    <title>And I signout of the application</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Check Valid Login"/>
+                <label name="feature" value="Test login feature in InsCo application"/>
+                <label name="host" value="Phoenix"/>
+                <label name="thread" value="7140@Phoenix.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="feature" value="Test login feature in InsCo application"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

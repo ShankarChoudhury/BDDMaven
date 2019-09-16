@@ -1,0 +1,7 @@
+IEdriver=C:\\java-workspace\\applications\\New folder\\IEDriverServer.exe
+AppURL = http://www.yahoomail.com
+YahooHome=http://www.yahoo.com
+GoogleHome=http://www.google.com
+RediffHome=http://www.rediff.com
+HotMailHome=http://www.hotmail.com
+HubUrl= http://www.google.com
