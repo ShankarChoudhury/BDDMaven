@@ -15,10 +15,6 @@ pipeline {
                 }
             }
         }
-          stage('Report') {
-            steps {
-                 step([$class: 'CukedoctorPublisher', target/: '', format: 'HTML', hideFeaturesSection: false, hideScenarioKeyword: false, hideStepTime: false, hideSummary: false, hideTags: false, numbered: true, sectAnchors: true, title: 'Living Documentation', toc: 'RIGHT'])
-            }
-        }
+         
     }
 }
