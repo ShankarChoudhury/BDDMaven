@@ -7,9 +7,11 @@ import cucumber.api.junit.Cucumber;
 //@RunWith(Cucumber)
 //@RunWith(CucumberWithSerenity.class)
 //@CucumberOptions
-@CucumberOptions(tags= {"@oneHRM,@InsCo"},features={"features"},
+// Command Line 
+// mvn test -Dcucumber.options="--tags @InsCo,@oneHRM"
+@CucumberOptions(tags= {"@oneHRM"},features={"features"},
 glue="cloudPackage",
-plugin={"html:target/cucumber-html-report","pretty:target/cucumber-html-report/cucumber-pretty-report.txt","junit:target/cucumber-html-report/cucumber-results.xml","json:target/cucumber.json"}
+plugin={"html:target/cucumber-html-report","pretty:target/cucumber-html-report/cucumber-pretty-report.txt","junit:target/cucumber-html-report/cucumber-results.xml","json:target/cucumber.json" }
 //format={"pretty:target/cucumber-pretty-report.txt"}
 /*,dryRun=true*/)
 //format={"junit:target/cucumber-results.xml"}

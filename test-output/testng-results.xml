@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="LoginSuite" duration-ms="141649" started-at="2018-10-22T03:56:29Z" finished-at="2018-10-22T03:58:51Z">
+  <suite name="BrowserLaunchSuite" duration-ms="3846" started-at="2019-12-16T09:51:26Z" finished-at="2019-12-16T09:51:30Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="141649" started-at="2018-10-22T03:56:29Z" finished-at="2018-10-22T03:58:51Z">
-      <class name="cloudPackage.LoginKimai">
-        <test-method status="PASS" signature="I_am_on_home_page_of_Kimai_Application()[pri:1, instance:cloudPackage.LoginKimai@187293dd]" name="I_am_on_home_page_of_Kimai_Application" duration-ms="123920" started-at="2018-10-21T22:56:30Z" finished-at="2018-10-21T22:58:34Z">
+    <test name="ListenerTest" duration-ms="3846" started-at="2019-12-16T09:51:26Z" finished-at="2019-12-16T09:51:30Z">
+      <class name="com.Listeners.Launchbrowser">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.Listeners.Launchbrowser@46a488c2]" name="setUp" is-config="true" duration-ms="8027" started-at="2019-12-16T09:51:18Z" finished-at="2019-12-16T09:51:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- I_am_on_home_page_of_Kimai_Application -->
-        <test-method status="PASS" signature="I_login_with_valid_credentials()[pri:2, instance:cloudPackage.LoginKimai@187293dd]" name="I_login_with_valid_credentials" duration-ms="5636" started-at="2018-10-21T22:58:34Z" finished-at="2018-10-21T22:58:39Z">
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="launchGoogle()[pri:0, instance:com.Listeners.Launchbrowser@46a488c2]" name="launchGoogle" duration-ms="2055" started-at="2019-12-16T09:51:26Z" finished-at="2019-12-16T09:51:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- I_login_with_valid_credentials -->
-        <test-method status="PASS" signature="I_should_see_home_page()[pri:3, instance:cloudPackage.LoginKimai@187293dd]" name="I_should_see_home_page" duration-ms="10931" started-at="2018-10-21T22:58:39Z" finished-at="2018-10-21T22:58:50Z">
+        </test-method> <!-- launchGoogle -->
+        <test-method status="PASS" signature="launchTest()[pri:0, instance:com.Listeners.Launchbrowser@46a488c2]" name="launchTest" duration-ms="1582" started-at="2019-12-16T09:51:28Z" finished-at="2019-12-16T09:51:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- I_should_see_home_page -->
-        <test-method status="PASS" signature="I_logout_of_the_application()[pri:4, instance:cloudPackage.LoginKimai@187293dd]" name="I_logout_of_the_application" duration-ms="910" started-at="2018-10-21T22:58:50Z" finished-at="2018-10-21T22:58:51Z">
+        </test-method> <!-- launchTest -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.Listeners.Launchbrowser@46a488c2]" name="cleanUp" is-config="true" duration-ms="1329" started-at="2019-12-16T09:51:30Z" finished-at="2019-12-16T09:51:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- I_logout_of_the_application -->
-      </class> <!-- cloudPackage.LoginKimai -->
-    </test> <!-- Test -->
-  </suite> <!-- LoginSuite -->
+        </test-method> <!-- cleanUp -->
+      </class> <!-- com.Listeners.Launchbrowser -->
+    </test> <!-- ListenerTest -->
+  </suite> <!-- BrowserLaunchSuite -->
 </testng-results>

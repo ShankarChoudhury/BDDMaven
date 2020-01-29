@@ -9,8 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -28,34 +28,46 @@ public class RunDatatableOrangeHRM {
 	 WebDriver driver;
 	static String  username;
 	
-	static String refUser="";
+	static String ApproverRefUser="";
 	int d=9;
 	@Given("^A browser is available$")
 	public void setUp() throws Throwable {
 	    // Express the Regexp above with the code you wish you had
 	//
-		String username = "shan.choudhury";
+		/*String username = "shan.choudhury";
 	    String accesskey = "33Yh73xr7YODTnrKLBL2WPbNoJRqz9VacHqUwODmtD6dXvzv5u";
-	    String baseURL = "@hub.lambdatest.com/wd/hub";
-		String gridURL = "https://" + username + ":" + accesskey + baseURL;
+	    String baseURL = "@hub.lambdatest.com/wd/hub";*/
+	//	String gridURL = "https://" + username + ":" + accesskey + baseURL;
 		DesiredCapabilities dcap = new DesiredCapabilities();
 		dcap.setCapability("browserName", "chrome");
-		dcap.setCapability("version", "70.0");
+		/*dcap.setCapability("version", "70.0");
 		dcap.setCapability("platform", "win10"); // If this cap isn't specified, it will just get any available one.
 		dcap.setCapability("build", "LambdaTestSampleApp");
 		dcap.setCapability("name", "LambdaTestJavaSample");
 		dcap.setCapability("network", true); // To enable network logs
 		dcap.setCapability("visual", true); // To enable step by step screenshot
 		dcap.setCapability("video", true); // To enable video recording
-		dcap.setCapability("console", true);
+		dcap.setCapability("console", true);*/
+	//	ChromeOptions chrOptions = new ChromeOptions();
+		//FirefoxOptions ffOptions = new FirefoxOptions();
+	//	ffOptions.addArguments("--headless");
+		/*chrOptions.addArguments("--headless");
+		chrOptions.addArguments("–-lang= en");
+		chrOptions.addArguments("start-maximized")*/;
 		
 		dcap.setCapability(CapabilityType.ACCEPT_SSL_CERTS,true);
+	//	dcap.setCapability(FirefoxOptions.FIREFOX_OPTIONS, ffOptions);
+	//	dcap.setCapability(FirefoxOptions.FIREFOX_OPTIONS, ffOptions);
+		
+		
+	//	chrOptions.setBinary("C:\\java-workspace\\applications\\iedriver\\chromedriver.exe");
 	//	System.setProperty("webdriver.gecko.driver", "C:\\java-workspace\\applications\\geckodriver\\geckodriver.exe");//System.setProperty("webdriver.ie.driver", "C:\\java-workspace\\applications\\New folder\\IEDriverServer.exe");
-		System.setProperty("webdriver.chrome.driver", "C:\\java-workspace\\applications\\iedriver\\chromedriver.exe");
+	//	System.setProperty("webdriver.chrome.driver", "C:\\java-workspace\\applications\\iedriver\\chromedriver.exe");
 
-	   driver = new ChromeDriver();
+	  // driver = new ChromeDriver(chrOptions);
 	 //  driver.navigate().back();
-	  // driver = new RemoteWebDriver(new URL(gridURL),dcap);
+	 //  driver = new RemoteWebDriver(new URL(""),dcap);
+	   driver = new RemoteWebDriver(new URL("http://192.168.54.2:4444/wd/hub"),dcap);
 	}
 
 	@Given("^Login fields are displayed$")
@@ -130,9 +142,9 @@ public class RunDatatableOrangeHRM {
 		  
 		  if (tableRowCount>=1) {
 			  
-			  refUser =  driver.findElement(By.xpath("//table[@id='resultTable']/tbody/tr["+2+"]/td[4]")).getText();
+			  ApproverRefUser =  driver.findElement(By.xpath("//table[@id='resultTable']/tbody/tr["+2+"]/td[4]")).getText();
 			  
-			  System.out.println("The user at second row is ---- "+refUser);
+			  System.out.println("The user at second row is ---- "+ApproverRefUser);
 		  }
 	  }
 	  else
@@ -158,7 +170,7 @@ public class RunDatatableOrangeHRM {
 		WebElement userRole = driver.findElement(By.id("systemUser_userType"));
 		Select userDD = new Select(userRole);
 		userDD.selectByVisibleText("Admin");
-		driver.findElement(By.id("systemUser_employeeName_empName")).sendKeys(refUser);
+		driver.findElement(By.id("systemUser_employeeName_empName")).sendKeys(ApproverRefUser);
 		driver.findElement(By.id("systemUser_userName")).sendKeys(username);
 		WebElement Userstatus = driver.findElement(By.id("systemUser_status"));
 		Select userStatus = new Select(Userstatus);
@@ -251,4 +263,6 @@ public class RunDatatableOrangeHRM {
 	public static void demoMethod(){
 		
 	}
+	
+	
 }

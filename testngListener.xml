@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BrowserLaunchSuite">
+<listeners>
+
+<listener class-name="com.Listeners.Listeners"></listener>
+</listeners>
+  <test thread-count="5" name="ListenerTest">
+    <classes>
+      <class name="com.Listeners.Launchbrowser"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

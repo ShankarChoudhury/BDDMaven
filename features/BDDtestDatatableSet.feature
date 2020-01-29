@@ -21,5 +21,10 @@ This feature would test create ,delete user functionality.
     But Login page should not be displayed 
     Examples:
     |Employee|UserName|
-    |Fiona Grace|Cucumber Tester03|
+    |Fiona Grace|Cucumber Tester14|
     ##|Linda Anderson|Cucumber Tester46|
+@addUser
+Scenario: Add user in denmowebApp
+Given I am on demoWebApp
+When i login with valid credentials
+Then i can add user with name "developerUser"

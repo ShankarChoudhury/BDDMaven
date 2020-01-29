@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import javafx.application.Application;
@@ -14,18 +15,23 @@ import javafx.application.Application;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Insco {
 WebDriver driver;
 	@Given("^I am on home page of InsCo Application$")
 	public void i_am_on_home_page_of_InsCo_Application() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-		System.setProperty("webdriver.gecko.driver", "C:\\java-workspace\\applications\\geckodriver\\geckodriver.exe");
+	//	System.setProperty("webdriver.gecko.driver", "C:\\java-workspace\\applications\\geckodriver\\geckodriver.exe");
+		WebDriverManager.firefoxdriver().setup();
 		DesiredCapabilities cap = new DesiredCapabilities();
 		//cap.setCapability(ChromeOptions.CAPABILITY, chromeopt);
-		cap.setCapability("browserName", "chrome");
+		FirefoxOptions ffOption = new FirefoxOptions();
+		ffOption.addArguments("--headless");
+		
+	//	cap.setCapability("browserName", "firefox");
 	//	driver = new RemoteWebDriver(new URL("http://10.0.0.63:4444/wd/hub"),cap);
-		driver = new FirefoxDriver();
+		driver = new FirefoxDriver(ffOption);
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
 		driver.get("http://demo.borland.com/InsuranceWebExtJS/index.jsf");
 	}
