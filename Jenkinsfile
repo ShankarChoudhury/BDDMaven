@@ -4,13 +4,15 @@ pipeline {
         stage('Example Build') {
             steps {
                 echo 'Hello, Maven'
-                sh 'mvn --version'
+                withMaven(maven : 'myMaven') {
+                    bat 'mvn test -DCucumber.options="-t @oneHRM"'
+                }
             }
         }
         stage('Example Test') {
             steps {
                 echo 'Hello, JDK'
-                sh 'java -version'
+               
             }
         }
     }
