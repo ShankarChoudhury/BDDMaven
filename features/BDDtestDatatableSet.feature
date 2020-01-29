@@ -21,7 +21,7 @@ This feature would test create ,delete user functionality.
     But Login page should not be displayed 
     Examples:
     |Employee|UserName|
-    |Fiona Grace|Cucumber Tester14|
+    |Fiona Grace|Cucumber Tester15|
     ##|Linda Anderson|Cucumber Tester46|
 @addUser
 Scenario: Add user in denmowebApp
