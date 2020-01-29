@@ -1,18 +1,18 @@
 pipeline {
     agent any 
     stages {
-        stage('Example Build') {
+        stage('Build') {
             steps {
-                echo 'Hello, Maven'
                 withMaven(maven : 'myMaven') {
-                    bat 'mvn test -DCucumber.options="-t @oneHRM"'
+                    bat 'mvn clean package'
                 }
             }
         }
-        stage('Example Test') {
+        stage('Test') {
             steps {
-                echo 'Hello, JDK'
-               
+                withMaven(maven : 'myMaven') {
+                    bat 'mvn test -DCucumber.options="-t @oneHRM"'
+                }
             }
         }
     }
