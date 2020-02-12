@@ -11,7 +11,7 @@ pipeline {
         stage('Test') {
             steps {
                 withMaven(maven : 'myMaven') {
-                    bat 'mvn test -DCucumber.options="-t @oneHRM"'
+                    bat 'mvn test -DCucumber.options="-t @oneHRM,@InsCo"'
                 }
             }
         }
