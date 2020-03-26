@@ -1,14 +1,17 @@
 package cloudPackage;
 
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import javax.swing.JOptionPane;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import javafx.application.Application;
 
@@ -21,17 +24,10 @@ public class Insco {
 WebDriver driver;
 	@Given("^I am on home page of InsCo Application$")
 	public void i_am_on_home_page_of_InsCo_Application() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	//	System.setProperty("webdriver.gecko.driver", "C:\\java-workspace\\applications\\geckodriver\\geckodriver.exe");
-		WebDriverManager.firefoxdriver().setup();
 		DesiredCapabilities cap = new DesiredCapabilities();
-		//cap.setCapability(ChromeOptions.CAPABILITY, chromeopt);
-		FirefoxOptions ffOption = new FirefoxOptions();
-		ffOption.addArguments("--headless");
-		
-	//	cap.setCapability("browserName", "firefox");
-	//	driver = new RemoteWebDriver(new URL("http://10.0.0.63:4444/wd/hub"),cap);
-		driver = new FirefoxDriver(ffOption);
+		cap.setCapability("browserName", "chrome");
+		driver = new RemoteWebDriver(new URL("http://192.168.54.2:4444/wd/hub"),cap);
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
 		driver.get("http://demo.borland.com/InsuranceWebExtJS/index.jsf");
 	}

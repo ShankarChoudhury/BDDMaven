@@ -72,6 +72,7 @@ public class RunDatatableOrangeHRM {
 	 //  driver.navigate().back();
 	 //  driver = new RemoteWebDriver(new URL(""),dcap);
 	   driver = new RemoteWebDriver(new URL("http://192.168.54.2:4444/wd/hub"),dcap);
+	   driver.manage().window().maximize();
 	}
 
 	@Given("^Login fields are displayed$")
