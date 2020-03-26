@@ -4,8 +4,8 @@ call mvn clean
 
 call mvn compile
 
-REM mvn test -DCucumber.options="- tags @test1"
-call mvn test
+mvn test -DCucumber.options="-- t @oneHRM"
+REM call mvn test
 
 mvn allure:serve
 

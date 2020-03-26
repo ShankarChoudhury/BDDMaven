@@ -11,6 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -49,13 +50,16 @@ public class RunDatatableOrangeHRM {
 		dcap.setCapability("video", true); // To enable video recording
 		dcap.setCapability("console", true);*/
 	//	ChromeOptions chrOptions = new ChromeOptions();
+	//	chrOptions.addArguments("--headless");
 		//FirefoxOptions ffOptions = new FirefoxOptions();
 	//	ffOptions.addArguments("--headless");
 		/*chrOptions.addArguments("--headless");
 		chrOptions.addArguments("–-lang= en");
 		chrOptions.addArguments("start-maximized")*/;
-		
+	//	dcap.setCapability(ChromeOptions.CAPABILITY, chrOptions);
 		dcap.setCapability(CapabilityType.ACCEPT_SSL_CERTS,true);
+	//	dcap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
+	//	dcap.setCapability(ChromeOptions.CAPABILITY, chrOptions);
 	//	dcap.setCapability(FirefoxOptions.FIREFOX_OPTIONS, ffOptions);
 	//	dcap.setCapability(FirefoxOptions.FIREFOX_OPTIONS, ffOptions);
 		
